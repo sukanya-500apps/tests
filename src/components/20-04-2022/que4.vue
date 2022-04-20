@@ -1,37 +1,43 @@
 <template>
-    <div id="class">
-        <h1>fetching data</h1>
-        <table align="center" id="mytable" class="table" border="5px"></table>
-        <thead>
-        <tr>
-            <th> name</th>
-            <th>email</th>
-        </tr>
-        </thead>
-        <tbody></tbody>
+    <div>
+        <center>
+    <p v-for="user in user" :key="user.id">
+{{user.name}}{{user.email}}
+    </p>
+        </center>
     </div>
 </template>
 <script>
-import axios from "axios";
-import $ from "jquery";
+import usersData from '../20-04-2022/users.json';
 export default{
     name:"QuE4",
-    mounted(){
-        this.getusers();
+    data(){
+        return{
+fields:["email","name"],
+user:usersData,
+        };
     },
-    methods:{
-        getusers(){
-            axios.get("https://json-generator.com/api/json/get/bSldINskRK").then (response=>{
-                $("mytable").Datatable({
-                    data:response.data,
-                    coloumns:[
-                        {data:"name"},
-                        {data:"email"},
-                    ],
-                });
-            })
-            
-    },
-}
-}
+};
 </script>
+
+<!--<template>
+    <div>
+        <h1>This isQustion-4</h1>
+        <p v-for="user in user" :key="user.id">
+            {{user.name}}{{user.email}}
+        </p>
+    </div>
+</template>
+<script>
+import usersData from '../20-04-2022/users.json'
+export default{
+    name:"QuestioN4",
+    data() {
+        return{
+            user:usersData,
+        }
+        
+    },
+}
+</script>-->
+
