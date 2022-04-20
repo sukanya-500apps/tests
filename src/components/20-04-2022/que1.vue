@@ -1,22 +1,37 @@
 <template>
-    <div id="class">
-        <input v-model="form.name" class="input" type="text" placeholder="Text input">
-        <button @click="func()">click</button>
-    </div>
+  <div>
+    <form name="myform" method="post" onsubmit="myfun()">
+      <input type="text" name="word" id="word" placeholder="Enter Text" />
+      <button @click="myfun()">Search</button>
+    </form>
+  </div>
 </template>
 <script>
-export default{
-    name:"TestS",
-methods:{
-    func(){
-         let arrayobj = ["agile", "crm", "mantra", "technologies", "500apps", "infinity"];
-this.substring = this.form.name.arrobj;
-this.match = arrayobj.find(element => {
-if (element.includes(this.substring)) {
-    console.log(arrayobj[0]);
-}
-});
-}
-}
-}
+export default {
+  name: "QuestioN1",
+  data() {
+    return {
+      array: ["agile", "crm", "mantra", "technologies", "500apps", "infinity"],
+    };
+  },
+  methods: {
+    myfun() {
+      let a = document.getElementById("word").value;
+      const match = this.array.find((element) => {
+        if (element.includes(a)) {
+          return true;
+        }
+      });
+      document.write(match);
+      if (match !== undefined) {
+        console.log("error");
+      }
+    },
+  },
+};
 </script>
+
+
+
+
+

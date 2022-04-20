@@ -1,14 +1,16 @@
 <template>
-<div>
-<h2>Ref Keyword </h2>
-<p>{{name}}</p>
-</div>
+  <div id="class">
+  </div>
 </template>
+
 <script>
 export default {
-name : "QuE6",
-props:{
-name:{Default : "sukanya",type :String}
-}
-}
+  name: "QuE6",
+  methods: {
+    child() {
+        let name="sukanya"
+        console.log(name)
+    },
+  },
+};
 </script>
