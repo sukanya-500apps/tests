@@ -16,7 +16,7 @@ export default {
   },
   methods: {
     fun() {
-    let response= axios.get("https://jsonplaceholder.typicode.com/todos/1")
+    let response= axios.get("https://jsonplaceholder.typicode.com/todos/")
 let mypromise=new Promise((myResolve,myReject)=>{
     myResolve(response);
     myReject("error");
