@@ -17,9 +17,9 @@ export default {
   methods: {
     myfun() {
       let a = document.getElementById("word").value;
-      const match = this.array.find((element) => {
+      const match = this.array.map((element) => {
         if (element.includes(a)) {
-          return true;
+          return element;
         }
       });
       document.write(match);
