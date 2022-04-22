@@ -3,7 +3,7 @@
 <h1>foreach</h1>
 <button @click="func()">click for for each</button>
 <b-table striped hover :items="studentsnames" :fields="fields" @Onclick="func2()"></b-table>
-<button @click="func2()">click for filter</button>
+<button @click="func2()">click for filter</button> 
 <button @click="func3()">click for map</button>
 <button @click="func4()">click for find</button>
 <p>{{copy}}</p>
