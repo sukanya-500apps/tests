@@ -11,7 +11,7 @@ export default {
   name: "AxiOs",
   data() {
     return {
-//result:" "
+//response:" "
     }
   },
   methods: {
