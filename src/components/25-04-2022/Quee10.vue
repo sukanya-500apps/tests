@@ -9,8 +9,10 @@ export default{
     name:"queE10",
     data(){
         return{
-             users :[ { id: 20, name: 'Captain Piett' }, { id: 24, name: 'General Veers' }, { id: 56, name:
-'Admiral Ozzel' }, { id: 88, name: 'Commander Jerjerrod' } ],
+             users :[ { id: 20, name: 'Captain Piett' },
+              { id: 24, name: 'General Veers' },
+               { id: 56, name:'Admiral Ozzel' }, 
+              { id: 88, name: 'Commander Jerjerrod' } ],
 result:" "
         }
     },

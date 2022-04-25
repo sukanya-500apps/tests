@@ -26,7 +26,7 @@ import Quee7 from '../components/25-04-2022/Quee7'
 import Quee8 from '../components/25-04-2022/Quee8'
 import Quee9 from '../components/25-04-2022/Quee9'
 import Quee10 from '../components/25-04-2022/Quee10'
-//import nj from '../components/25-04-2022/nj'
+import emitparent from '../components/practice/emitparent'
 Vue.use(Router)
 
 const routes=[
@@ -55,7 +55,7 @@ const routes=[
 {path:'/Quee8',name:"Quee8",component:Quee8,},
 {path:'/Quee9',name:"Quee9",component:Quee9,},
 {path:'/Quee10',name:"Quee10",component:Quee10,},
-//{path:'/nj',name:"nj",component:nj,},
+{path:'/emitparent',name:"emitparent",component:emitparent,},
 ]
 let router=new Router({routes})
 export default router
