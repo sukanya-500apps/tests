@@ -16,8 +16,11 @@ import que9 from '../components/20-04-2022/que9'
 import que10 from '../components/20-04-2022/que10'
 import spliceslice from '../components/practice/spliceslice'
 import foreach1 from '../components/practice/foreach1'
+import axios1 from '../components/practice/axios1'
+import dropdown from '../components/practice/dropdown'
 
-
+import Quee1 from '../components/25-04-2022/Quee1'
+import Quee2 from '../components/25-04-2022/Quee2'
 Vue.use(Router)
 
 const routes=[
@@ -36,9 +39,11 @@ const routes=[
 {path:'/que10',name:"que10",component:que10,},
 {path:'/foreach1',name:"foreach1",component:foreach1,},
 {path:'/spliceslice',name:"spliceslice",component:spliceslice,},
+{path:'/axios1',name:"axios1",component:axios1,},
+{path:'/dropdown',name:"dropdown",component:dropdown,},
 
-
-
+{path:'/Quee1',name:"Quee1",component:Quee1,},
+{path:'/Quee2',name:"Quee2",component:Quee2,},
 ]
 let router=new Router({routes})
 export default router

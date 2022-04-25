@@ -1,15 +1,25 @@
 <template>
-  <div>
-    <h1>Using Axios</h1>
-<button v-on:click="fun()">clickme</button>
-  <b-table striped hover :items="res" :fields="fields"></b-table>
-<!-- <p>{{res}}</p> -->
-  </div>
+    <div>
+        <table align="centre">
+          <h3>{{res}}</h3>
+           <button v-on:click="fun()">click</button>
+            <tbody>
+            <tr v-for="userId in res" :key="userId.id"></tr>
+            <tr v-for="id in res" :key="id.id"> </tr>
+<tr v-for="title in res" :key="title"></tr>
+<tr v-for="completed in res" :key="completed"></tr>
+<td>{{res.userId}}</td>
+<td>{{res.id}}</td>
+<td>{{res.title}}</td>
+<td>{{res.completed}}</td>
+            </tbody>
+        </table>
+    </div>
 </template>
 <script>
-import axios from "axios";
-export default {
-  name: "AxiOs",
+import axios from "axios"
+export default{
+     name: "AxiOs1",
   data() {
     return {
 res:[ ],
@@ -24,10 +34,9 @@ let mypromise=new Promise((myResolve,myReject)=>{
     myReject("error");
 })
        mypromise.then(response =>{
-         this.res=response.res;
+         this.res=response;
          console.log(response.data);
-         
-         return response.data
+         //return response.data
          })
          mypromise.then(function (error) {
           if (error.response) {
@@ -49,4 +58,3 @@ let mypromise=new Promise((myResolve,myReject)=>{
   }
 }
 </script>
-
