@@ -21,6 +21,12 @@ import dropdown from '../components/practice/dropdown'
 
 import Quee1 from '../components/25-04-2022/Quee1'
 import Quee2 from '../components/25-04-2022/Quee2'
+import Quee6 from '../components/25-04-2022/Quee6'
+import Quee7 from '../components/25-04-2022/Quee7'
+import Quee8 from '../components/25-04-2022/Quee8'
+import Quee9 from '../components/25-04-2022/Quee9'
+import Quee10 from '../components/25-04-2022/Quee10'
+//import nj from '../components/25-04-2022/nj'
 Vue.use(Router)
 
 const routes=[
@@ -44,6 +50,12 @@ const routes=[
 
 {path:'/Quee1',name:"Quee1",component:Quee1,},
 {path:'/Quee2',name:"Quee2",component:Quee2,},
+{path:'/Quee6',name:"Quee6",component:Quee6,},
+{path:'/Quee7',name:"Quee7",component:Quee7,},
+{path:'/Quee8',name:"Quee8",component:Quee8,},
+{path:'/Quee9',name:"Quee9",component:Quee9,},
+{path:'/Quee10',name:"Quee10",component:Quee10,},
+//{path:'/nj',name:"nj",component:nj,},
 ]
 let router=new Router({routes})
 export default router
