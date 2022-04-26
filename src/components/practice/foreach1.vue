@@ -9,7 +9,7 @@
 <p>{{copy}}</p>
 <p>{{Search.name}}</p>
 <p>{{new_arr}}</p>
-<p>{{studentsnames}}<br/></p>
+{{studentsnames}}
     </div>
 </template>
 <script>
@@ -23,7 +23,7 @@ export default{
            copy:[ ],
            students: [
         { name: "sukanya", age: 22 },
-        { name: "radha", age: 24 },
+        { name: "radha", age: 22 },
         { name: "anusha", age: 20 },
         { name: "Navya", age: 25 },
         { name: "sruthi", age: 21 },
@@ -36,15 +36,14 @@ export default{
             items.forEach(row=>{
              this.copy.push(row+2)
            console.log(row+2)
-          // document.write( row+2 +"</br>")
+           //document.write( row+2 +"</br>")
             })
         },
         func2(){
       this.studentsnames=this.students.filter(student=>student.name!="sukanya");
-      return this.studentsnames.name
-//console.log(this.studentsnames)
-
-        },
+      //return this.studentsnames.name
+console.log(this.studentsnames)
+  },
 
     func3(){
         let arr = [10,20,30,40,50,60,70,80]
@@ -54,7 +53,7 @@ return num/2
 console.log(this.new_arr)
     },
     func4(){
-this.Search= this.students.find( element => { return element.name=='sukanya'});
+this.Search= this.students.find( element => { return element.age=='22'});
 console.log(this.Search)
 }
 }

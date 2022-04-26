@@ -13,19 +13,19 @@ export default {
   data() {
     return {
 res:[ ],
-fields:["userId","id","title","completed"]
+fields:["SALES","MARKETING","SERVICE","completed"]
     }
   },
   methods: {
     fun() {
-   let response= axios.get("https://jsonplaceholder.typicode.com/todos/")
+   let response= axios.get( "https://agilecrm.com")
 let mypromise=new Promise((myResolve,myReject)=>{
     myResolve(response);
     myReject("error");
 })
        mypromise.then(response =>{
          this.res=response.data;
-         //console.log(response.data);
+         console.log(response.data);
          
        //
          })
@@ -36,17 +36,7 @@ let mypromise=new Promise((myResolve,myReject)=>{
             console.log(error.response.headers);
           }
         });
-     axios.post("https://jsonplaceholder.typicode.com/todos", {
-         title: "sukanya",
-       })
-       .then(function (response) {
-          console.log(response);
-        })
-        .catch(function (error) {
-          console.log(error);
-    });
-    },
+    }
   }
 }
-</script>
-
+  </script>

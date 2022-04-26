@@ -9,7 +9,8 @@ export default{
     name:"QuEe5",
 methods:{
     func(){
-        this.$emit('check',{subject:'finance'})
+         console.log("data")
+        this.$emit('check',{'subject':'finance'})
     }
 }
 }

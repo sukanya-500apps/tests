@@ -1,8 +1,8 @@
 <template>
     <div>
         <p>emit</p>
-        <b-table striped hover :items="user" :fields="fields" v-if="name==sukanya"></b-table>
-       <emitchild @check="parent()" /> 
+        <b-table striped hover :items="user" :fields="fields" ></b-table>
+       <emitchild @check="parent" /> 
     </div>
 </template>
 <script>
@@ -21,9 +21,9 @@ return{
 }
 },
 methods:{
-    parent(){
-    if(this.user.name=="sukanya")
-    return this.user.subject=="java"
+    parent(data){
+        console.log("data",data)
+     this.user[0].subject= data.subject;
 }
 }
 }

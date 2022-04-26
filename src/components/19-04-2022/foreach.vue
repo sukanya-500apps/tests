@@ -29,7 +29,7 @@ export default {
       console.log(studentnames);
     },
     f1() {
-      this.array.forEach((arrayItems, index) => {
+       this. array.forEach((arrayItems, index) => {
         console.log(arrayItems, index);
       });
     },

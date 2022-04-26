@@ -36,7 +36,7 @@ let mypromise=new Promise((myResolve,myReject)=>{
        mypromise.then(response =>{
          this.res=response;
          console.log(response.data);
-         //return response.data
+         return response.data
          })
          mypromise.then(function (error) {
           if (error.response) {

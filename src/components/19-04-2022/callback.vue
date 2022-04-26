@@ -3,7 +3,6 @@
 <h2>callback2</h2>
 <p>{{mydisplayer()}}</p>
     </div>
-    
 </template>
 <script>
 export default{
