@@ -18,7 +18,7 @@ import spliceslice from '../components/practice/spliceslice'
 import foreach1 from '../components/practice/foreach1'
 import axios1 from '../components/practice/axios1'
 import dropdown from '../components/practice/dropdown'
-import pagination from '../components/practice/pagination'
+import parse from '../components/practice/parse'
 import Quee1 from '../components/25-04-2022/Quee1'
 import Quee2 from '../components/25-04-2022/Quee2'
 import Quee6 from '../components/25-04-2022/Quee6'
@@ -31,13 +31,12 @@ import Question1 from '../components/26-04-2022/Question1'
 import Question2 from '../components/26-04-2022/Question2'
  import Question3 from '../components/26-04-2022/Question3'
 import Question4 from '../components/26-04-2022/Question4'
+
  import Question5 from '../components/26-04-2022/Question5'
 import Question6 from '../components/26-04-2022/Question6'
  import Question7 from '../components/26-04-2022/Question7'
-
-
+ import Question3table from '../components/27-04-2022/Question3table'
 Vue.use(Router)
-
 const routes=[
 {path:'/callback',name:"callback",component:callback},
 {path:'/callback2',name:"callback2",component:callback2},
@@ -56,7 +55,7 @@ const routes=[
 {path:'/spliceslice',name:"spliceslice",component:spliceslice,},
 {path:'/axios1',name:"axios1",component:axios1,},
 {path:'/dropdown',name:"dropdown",component:dropdown,},
-{path:'/pagination',name:"pagination",component:pagination,},
+{path:'/parse',name:"parse",component:parse,},
 {path:'/Quee1',name:"Quee1",component:Quee1,},
 {path:'/Quee2',name:"Quee2",component:Quee2,},
 {path:'/Quee6',name:"Quee6",component:Quee6,},
@@ -72,7 +71,8 @@ const routes=[
 {path:'/Question5',name:"Question5",component:Question5},
 {path:'/Question6',name:"Question6",component:Question6},
 {path:'/Question7',name:"Question7",component:Question7},
-
+//{path:'/callback1',name:"callback1",component:callback1},
+{path:'/Question3table',name:"Question3table",component:Question3table},
 ]
 let router=new Router({routes})
 export default router

@@ -13,7 +13,7 @@ export default {
   data() {
     return {
 res:[ ],
-fields:["SALES","MARKETING","SERVICE","completed"]
+fields:["url"]
     }
   },
   methods: {

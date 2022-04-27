@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Pull Domains form a page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+
+<div class="card-deck">
+<div class="card mb-3" style="min-width: 10rem;"><div class="card-body"><a href="https://www.agilecrm.com/sitemap.xml">Link 1</a></div></div>
+
+</div>
+
+<div id="domains"></div>
+
+</body>
+</html>
+<script>
+    var re = /^((http[s]?|ftp|mailto):(?:\/\/)?)?\/?(([^\/\.]+\.)*?([^\/\.]+\.[^:\/\s\.]{1,4})?(\.[^:\/\s\.]{1,2})?(:\d+)?)($|\/)([^#?\s]+)?(.*?)?(#[\w\-]+)?$/i;
+var reG = /^((http[s]?|ftp|mailto):(?:\/\/)?)?\/?(([^\/\.]+\.)*?([^\/\.]+\.[^:\/\s\.]{1,4})?(\.[^:\/\s\.]{1,2})?(:\d+)?)($|\/)([^#?\s]+)?(.*?)?(#[\w\-]+)?$/ig;
+var printList = document.getElementById("domains");
+var unorderedList =  document.createElement("ul");
+unorderedList.setAttribute("id", "domainsList");
+unorderedList.setAttribute("class", "list-group");
+printList.appendChild(unorderedList);
+var domainsList = document.getElementById("domainsList");
+
+
+var list = document.getElementsByTagName("a");
+//console.log(list);
+var listArray = Array.from(list);
+
+//loop through the list
+listArray.forEach(function(link){
+	//console.log(link.href);
+  //console.log(typeof(link.href));
+
+var listItem =  document.createElement("li");
+listItem.setAttribute("class", "list-group-item domain"); 
+domainsList.appendChild(listItem);
+  var str = link.href;
+  var match = str.match(reG);
+  var matchGroup = str.match(re);
+  //console.log(matchGroup[5]);
+  var domainNode = document.createTextNode("Domain: " + matchGroup[5]);
+  listItem.appendChild(domainNode);
+  var breakNode  =  document.createElement("br");
+  listItem.appendChild(breakNode);
+  var websiteNode = document.createTextNode("Website: " + matchGroup[3]);
+  listItem.appendChild(websiteNode);
+  var breakNode  =  document.createElement("br");
+  listItem.appendChild(breakNode);
+  var fullNode = document.createTextNode("Full Link: " + match);
+  listItem.appendChild(fullNode);
+  domainsList.appendChild(listItem);
+  unorderedList.appendChild(listItem)
+});
+
+</script>

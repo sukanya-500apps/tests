@@ -322,7 +322,6 @@ console.log(error);
       return this.items.length;
     },
   },
-
   created() {
     this.getData();
   },
