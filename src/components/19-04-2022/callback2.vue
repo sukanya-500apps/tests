@@ -16,7 +16,7 @@ export default{
         mydisplayer:(some)=>{
             return some;
         },
-        mycalculator:(arg1,arg2,arg3)=>{
+        mycalculator:(arg1,arg2,sum)=>{
             let sum=arg1+arg2;
             console.log(arg3)
            return sum;

@@ -29,17 +29,18 @@ let mypromise=new Promise((myResolve,myReject)=>{
          
        //
          })
-         mypromise.then(function (error) {
+         mypromise.then( (error)=> {
           if (error.response) {
             console.log(error.response.data)
             console.log(error.response.status);
-            console.log(error.response.headers);
           }
         });
-     axios.post("https://jsonplaceholder.typicode.com/todos", {
+     axios.post("https://jsonplaceholder.typicode.com/todos", 
+     {
          title: "sukanya",
        })
-       .then(function (response) {
+       .then(function (response)
+        {
           console.log(response);
         })
         .catch(function (error) {

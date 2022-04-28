@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import callback from '../components/19-04-2022/callback'
-import callback2 from '../components/19-04-2022/callback2'
+//import callback2 from '../components/19-04-2022/callback2'
 import axios from '../components/19-04-2022/axios'
 import foreach from '../components/19-04-2022/foreach'
 
@@ -36,10 +36,13 @@ import Question4 from '../components/26-04-2022/Question4'
 import Question6 from '../components/26-04-2022/Question6'
  import Question7 from '../components/26-04-2022/Question7'
  import Question3table from '../components/27-04-2022/Question3table'
+ import ques1 from '../components/28-04-2022/ques1'
+ import ques2 from '../components/28-04-2022/ques2'
+//  import ques3 from '../components/28-04-2022/ques3'
 Vue.use(Router)
 const routes=[
 {path:'/callback',name:"callback",component:callback},
-{path:'/callback2',name:"callback2",component:callback2},
+//{path:'/callback2',name:"callback2",component:callback2},
 {path:'/axios',name:"axios",component:axios,},
 {path:'/que1',name:"que1",component:que1,},
  
@@ -73,6 +76,9 @@ const routes=[
 {path:'/Question7',name:"Question7",component:Question7},
 //{path:'/callback1',name:"callback1",component:callback1},
 {path:'/Question3table',name:"Question3table",component:Question3table},
+{path:'/ques1',name:"ques1",component:ques1},
+ {path:'/ques2',name:"ques2",component:ques2},
+//  {path:'/ques3',name:"ques3",component:ques3},
 ]
 let router=new Router({routes})
 export default router

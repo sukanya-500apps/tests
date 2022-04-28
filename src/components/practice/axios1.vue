@@ -28,7 +28,7 @@ fields:["userId","id","title","completed"]
   },
   methods: {
     fun() {
-   let response= axios.get("https://jsonplaceholder.typicode.com/todos/")
+   let response= axios.get("https://jsonplaceholder.typicode.com/todos/".html())
 let mypromise=new Promise((myResolve,myReject)=>{
     myResolve(response);
     myReject("error");

@@ -11,16 +11,16 @@ export default {
   data() {
     return {
       text: ["Ford", "BMW", "Audi", "Fiat"],
-      res: [ ],
+      res:" ",
     };
   },
   methods: {
     fun() {
-      this.res = JSON.stringify(this.text);
-      //console.log(this.res);
-       this.res=this.text.filter((res)=>{
-       res==this.text[1]
-       })
+      this.res = JSON.stringify(this.text.filter((row)=>{
+       row=="BMW"
+       }));
+      console.log(this.res);
+      
     },
   },
 };
