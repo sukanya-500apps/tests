@@ -1,32 +1,28 @@
 <template>
   <div>
-<h1>callback</h1>
- 
-<p>{{result}}</p>
+    <button @click="myCalculator(5, 5, myDisplayer)">ClickMe</button>
   </div>
 </template>
 
 <script>
 export default {
-    name:"CaLlback1",
-data(){
-    return{
-result :this.myCalculator(5, 5,this.myDisplayer()),
-    }
-},
-methods:{
-   myDisplayer:(some) => {
-  console.log(some)
-  },
- myCalculator:(num1, num2) =>{
-  let sum = num1 + num2;
-  return sum;
- }
-    }
+  name: "CallBack",
 
-}
+  data() {
+    return {
+    };
+  },
+  methods: {
+   myDisplayer(something){
+      console.log(something);
+    },
+
+    myCalculator:(num1, num2, myCallback) =>{
+      let sum = num1 + num2;
+
+      myCallback(sum);
+    },
+  },
+};
 </script>
 
-<style>
-
-</style>

@@ -1,19 +1,8 @@
 <template>
     <div>
-        <table align="centre">
-          <h3>{{res}}</h3>
            <button v-on:click="fun()">click</button>
-            <tbody>
-            <tr v-for="userId in res" :key="userId.id"></tr>
-            <tr v-for="id in res" :key="id.id"> </tr>
-<tr v-for="title in res" :key="title"></tr>
-<tr v-for="completed in res" :key="completed"></tr>
-<td>{{res.userId}}</td>
-<td>{{res.id}}</td>
-<td>{{res.title}}</td>
-<td>{{res.completed}}</td>
-            </tbody>
-        </table>
+             <button v-on:click="updateProduct()">clickme</button>
+          <b-table :items="res" :fields="fields"></b-table>  
     </div>
 </template>
 <script>
@@ -26,17 +15,22 @@ res:[ ],
 fields:["userId","id","title","completed"]
     }
   },
+  
   methods: {
-    fun() {
-   let response= axios.get("https://jsonplaceholder.typicode.com/todos/".html())
+    async fun() {
+      let data = [{
+    		title:'delectus aut autem',// eslint-disable-line no-mixed-spaces-and-tabs
+    		completed:'completed'// eslint-disable-line no-mixed-spaces-and-tabs
+      }];// eslint-disable-line no-mixed-spaces-and-tabs
+   let response= await axios.get("https://jsonplaceholder.typicode.com/todos/")
 let mypromise=new Promise((myResolve,myReject)=>{
     myResolve(response);
     myReject("error");
 })
        mypromise.then(response =>{
-         this.res=response;
+         this.res=response.data;
          console.log(response.data);
-         return response.data
+         //return response.data
          })
          mypromise.then(function (error) {
           if (error.response) {
@@ -54,7 +48,38 @@ let mypromise=new Promise((myResolve,myReject)=>{
         .catch(function (error) {
           console.log(error);
     });
+    axios.put("https://jsonplaceholder.typicode.com/todos",data)
+   .then(response => {
+                 console.log(response);
+             })
+             .catch(function (error) {
+                console.log(error.response)
+             })
+    },
+    
+    updateProduct(productId) {
+        const headers = { 
+            'Authorization': 'Bearer my-token',
+            'Content-Type': 'application/json'
+        };
+        const data = {// eslint-disable-line no-mixed-spaces-and-tabs
+    		name: 'Test Post',// eslint-disable-line no-mixed-spaces-and-tabs
+    		date: '2021.08.10'// eslint-disable-line no-mixed-spaces-and-tabs
+    	};// eslint-disable-line no-mixed-spaces-and-tabs
+        axios.put(`http://127.0.0.1:8000/api/products/${productId}`, data, {headers})
+             .then(response1 => {
+                 console.log(response1);
+             })
+             .catch(function (error) {
+                console.log(error.response1)
+             })
+    }
     },
   }
-}
+
+  
+ 
+
+
+
 </script>

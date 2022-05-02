@@ -6,27 +6,10 @@
 </template>
 <script>
   export default {
-  	props: {
-  		post: Object
-  	}
+    name:"PoSt",
+  	props: {// eslint-disable-line no-mixed-spaces-and-tabs
+
+  		post: Object// eslint-disable-line no-mixed-spaces-and-tabs
+  	}// eslint-disable-line no-mixed-spaces-and-tabs
   }
 </script>
-<style scoped>
-  .post {
-  	background: #fff;
-  	padding: 1.5em;
-  }
-
-  .post:not(:last-child) {
-  	border-bottom: 1px solid #ddd;
-  }
-
-  .post h2 {
-  	font-size: 1.3em;
-  	padding-bottom: 0.25rem;
-  }
-
-  .post p {
-  	color: #888;
-  }
-</style>

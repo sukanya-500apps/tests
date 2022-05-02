@@ -109,6 +109,7 @@ small>
                 class="list-group-item"
                 v-for="value in countries"
                 :key="value.name"
+
               >
                 <b-container class="bv-example-row">
                   <b-card>

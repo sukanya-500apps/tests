@@ -40,7 +40,7 @@ export default{
             })
         },
         func2(){
-      this.studentsnames=this.students.filter(student=>student.name!="sukanya");
+      this.studentsnames=this.students.filter(student=> student.name!="sukanya");
       //return this.studentsnames.name
 console.log(this.studentsnames)
   },

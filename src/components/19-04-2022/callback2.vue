@@ -13,14 +13,16 @@ export default{
         }
     },
     methods:{
-        mydisplayer:(some)=>{
+        func(){
+       this.mydisplayer=(some)=>{
             return some;
         },
-        mycalculator:(arg1,arg2,sum)=>{
+       this.mycalculator=(arg1,arg2)=>{
             let sum=arg1+arg2;
-            console.log(arg3)
+            //console.log(arg3)
            return sum;
-        },
         }
+        }
+    }
 }
 </script>

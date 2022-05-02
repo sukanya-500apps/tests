@@ -45,7 +45,7 @@
      :items="posts"
      :fields="fields"
      :filter="filter"
-     :filter-included-fields="filterOn"
+    
      @filtered="onFiltered">
     </b-table>
   </b-container>

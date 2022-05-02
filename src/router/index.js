@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import callback from '../components/19-04-2022/callback'
-//import callback2 from '../components/19-04-2022/callback2'
+import callback2 from '../components/19-04-2022/callback2'
 import axios from '../components/19-04-2022/axios'
 import foreach from '../components/19-04-2022/foreach'
-
+import callbacK from '../components/practice/callbacK'
 import que1 from '../components/20-04-2022/que1'
 import que3 from '../components/20-04-2022/que3'
 //import que4 from '../components/20-04-2022/que4'
@@ -19,6 +19,7 @@ import foreach1 from '../components/practice/foreach1'
 import axios1 from '../components/practice/axios1'
 import dropdown from '../components/practice/dropdown'
 import parse from '../components/practice/parse'
+import fetchh from '../components/practice/fetchh'
 import Quee1 from '../components/25-04-2022/Quee1'
 import Quee2 from '../components/25-04-2022/Quee2'
 import Quee6 from '../components/25-04-2022/Quee6'
@@ -31,21 +32,29 @@ import Question1 from '../components/26-04-2022/Question1'
 import Question2 from '../components/26-04-2022/Question2'
  import Question3 from '../components/26-04-2022/Question3'
 import Question4 from '../components/26-04-2022/Question4'
-
+import callback1 from '../components/19-04-2022/callback1'
  import Question5 from '../components/26-04-2022/Question5'
 import Question6 from '../components/26-04-2022/Question6'
  import Question7 from '../components/26-04-2022/Question7'
  import Question3table from '../components/27-04-2022/Question3table'
  import ques1 from '../components/28-04-2022/ques1'
  import ques2 from '../components/28-04-2022/ques2'
-//  import ques3 from '../components/28-04-2022/ques3'
+ //import Listcomponent from '../components/practice/Listcomponent'
+ //import pagination from '../components/practice/pagination'
+ import ques3 from '../components/28-04-2022/ques3'
+ //import networkgraph from '../components/28-04-2022/networkgraph'
+ import que11 from '../components/2-05-2022/que11'
+ import que12 from '../components/2-05-2022/que12'
+ import que13 from '../components/2-05-2022/que13'
+ import que17 from '../components/2-05-2022/que17'
+ import que19 from '../components/2-05-2022/que19'
 Vue.use(Router)
 const routes=[
 {path:'/callback',name:"callback",component:callback},
-//{path:'/callback2',name:"callback2",component:callback2},
+{path:'/callback2',name:"callback2",component:callback2},
 {path:'/axios',name:"axios",component:axios,},
 {path:'/que1',name:"que1",component:que1,},
- 
+{path:'/callbacK',name:"callbacK",component:callbacK},
 {path:'/que3',name:"que3",component:que3,}, 
 {path:'/foreach',name:"foreach",component:foreach,}, 
 {path:'/que5',name:"que5",component:que5,}, 
@@ -74,11 +83,20 @@ const routes=[
 {path:'/Question5',name:"Question5",component:Question5},
 {path:'/Question6',name:"Question6",component:Question6},
 {path:'/Question7',name:"Question7",component:Question7},
-//{path:'/callback1',name:"callback1",component:callback1},
+{path:'/callback1',name:"callback1",component:callback1},
 {path:'/Question3table',name:"Question3table",component:Question3table},
 {path:'/ques1',name:"ques1",component:ques1},
+{path:'/fetchh',name:"fetch",component:fetchh},
  {path:'/ques2',name:"ques2",component:ques2},
-//  {path:'/ques3',name:"ques3",component:ques3},
+ //{path:'/Listcomponent',name:"Listcomponent",component:Listcomponent},
+  {path:'/ques3',name:"que3",component:ques3},
+  {path:'/que11',name:"que11",component:que11},
+  {path:'/que12',name:"que12",component:que12},
+  {path:'/que13',name:"que13",component:que13},
+  {path:'/que17',name:"que17",component:que17},
+  {path:'/que19',name:"que19",component:que19},
+//{path:'/pagination',name:"pagination",component:pagination},
+//{path:'/networkgraph',name:"networkgraph",component:networkgraph},
 ]
 let router=new Router({routes})
 export default router

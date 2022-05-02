@@ -10,8 +10,9 @@
 <script>
 import PostComponent from "./Post.vue";
 import { ref, onMounted, onUnmounted } from "vue";
-import getPosts from "../scripts/post-loader";
+import getPosts from "../practice/get-posts";
 export default{
+  name:"LiStcomponent",
 components:{
     PostComponent
 },
@@ -21,31 +22,29 @@ data(){
 methods:{
     
     setup () {
-  	const posts = ref(getPosts(10))
-  	const scrollComponent = ref(null)
+  	const posts = ref(getPosts(10))// eslint-disable-line no-mixed-spaces-and-tabs
+  	const scrollComponent = ref(null)// eslint-disable-line no-mixed-spaces-and-tabs
        return {
-  		posts,
-  		scrollComponent
+  		posts,// eslint-disable-line no-mixed-spaces-and-tabs
+  		scrollComponent// eslint-disable-line no-mixed-spaces-and-tabs
     } 
     },
     },
-    // onMounted(() =>{
-  	// 	window.addEventListener("scroll", handleScroll)
-    //      })
+    mounted(){
+    onMounted(() =>{
+  		window.addEventListener("scroll", handleScroll)// eslint-disable-line no-mixed-spaces-and-tabs
+         })
 
-  	// onUnmounted(() => {
-  	// 	window.removeEventListener("scroll", handleScroll)
-  	// })
-     	
-//   	const handleScroll = (e) => {
-//   let element = scrollComponent.value;
-//   if (element.getBoundingClientRect().bottom < window.innerHeight) {
-//     loadMorePosts();
-//   }
-//   	}
-// }
-// }
-
-
+  	onUnmounted(() => {// eslint-disable-line no-mixed-spaces-and-tabs
+  		window.removeEventListener("scroll", handleScroll)// eslint-disable-line no-mixed-spaces-and-tabs
+  	})// eslint-disable-line no-mixed-spaces-and-tabs
+     	// eslint-disable-line no-mixed-spaces-and-tabs
+  	const handleScroll = (e) => {// eslint-disable-line no-mixed-spaces-and-tabs
+  let element = e.scrollComponent.value;
+  if (element.getBoundingClientRect().bottom < window.innerHeight) {
+    this.loadMorePosts();
+  }
+  	}// eslint-disable-line no-mixed-spaces-and-tabs
+}
 }
 </script>
