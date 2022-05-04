@@ -31,10 +31,10 @@
 </template>
 
 <script>
-   import TablE from './TablE1.vue';
+  import TablE from './TablE.vue'
 
    export default {
-       name:"QuEstion3table",
+       name:"TaBle",
        components: {TablE},
    };
 </script>

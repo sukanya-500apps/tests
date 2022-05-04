@@ -6,6 +6,7 @@
 <button @click="func2()">click for filter</button> 
 <button @click="func3()">click for map</button>
 <button @click="func4()">click for find</button>
+<button @click="funcc()">click for mapp</button>
 <p>{{copy}}</p>
 <p>{{Search.name}}</p>
 <p>{{new_arr}}</p>
@@ -26,8 +27,7 @@ export default{
         { name: "radha", age: 22 },
         { name: "anusha", age: 20 },
         { name: "Navya", age: 25 },
-        { name: "sruthi", age: 21 },
-      ],
+        { name: "sruthi", age: 21 },],
         }
     },
     methods:{
@@ -51,6 +51,10 @@ this.new_arr = arr.map(num=>{
 return num/2
 })
 console.log(this.new_arr)
+    },
+    funcc(){
+this.studentt=this.students.map(student=>student.name!="sukanya");
+console.log(this.studentt)
     },
     func4(){
 this.Search= this.students.find( element => { return element.age=='22'});

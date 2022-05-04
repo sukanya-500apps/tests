@@ -47,7 +47,10 @@ import Question6 from '../components/26-04-2022/Question6'
  import que12 from '../components/2-05-2022/que12'
  import que13 from '../components/2-05-2022/que13'
  import que17 from '../components/2-05-2022/que17'
+ import que18 from '../components/2-05-2022/que18'
  import que19 from '../components/2-05-2022/que19'
+ import crud from '../components/4-5-2022/crud'
+ import slot from '../components/practice/slot'
 Vue.use(Router)
 const routes=[
 {path:'/callback',name:"callback",component:callback},
@@ -94,7 +97,10 @@ const routes=[
   {path:'/que12',name:"que12",component:que12},
   {path:'/que13',name:"que13",component:que13},
   {path:'/que17',name:"que17",component:que17},
+  {path:'/que18',name:"que18",component:que18},
   {path:'/que19',name:"que19",component:que19},
+  {path:'/crud',name:"crud",component:crud},
+  {path:'/slot',name:"slot",component:slot},
 //{path:'/pagination',name:"pagination",component:pagination},
 //{path:'/networkgraph',name:"networkgraph",component:networkgraph},
 ]

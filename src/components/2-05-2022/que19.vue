@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button type="submit" @click="myFunction">Click Me</button>
+    <button type="submit" @click="myFunction()">Click Me</button>
   </div>
 </template>
     <script>
