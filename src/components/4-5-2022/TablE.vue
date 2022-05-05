@@ -2,7 +2,7 @@
     <div>
         <b-button @click="createItem" class="mb-2" variant="primary" size="sm">Create</b-button>
 
-        <b-table striped hover  :items="tableData" :fields="columns">
+        <b-table   :items="tableData" :fields="columns">
             <template #cell(action)="data">
                 <b-button @click="editItem(data.item)" variant="primary" size="sm">Edit</b-button>
                 <b-button @click="deleteItem(data.item)" v-b-modal="'edit-modal'" variant="danger" size="sm">Delete</b-button>

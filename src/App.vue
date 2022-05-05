@@ -1,5 +1,13 @@
 <template>
-    <router-view/>
+    <!-- <router-view/> -->
+    <div>
+      <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
+        <app-ninjas v-bind:ninjas="ninjas"></app-ninjas>
+        <ul>
+          <li v-for="ninja in ninjas" :key="ninja.id">{{ ninja.name }}</li>
+        </ul>
+        <app-footer v-bind:title="title"></app-footer>
+    </div>
     <!-- <h1>Question5</h1>
     <p>Name:{{name}}</p>
     <p>Subject:{{subject}}</p>
@@ -23,6 +31,34 @@
   </div> -->
 </template>
 <script>
+import Header from '@components/practice/Header.vue';
+import Footer from '@/components/practice/Footer.vue';
+import Ninjas from '@/components/practice/Ninjas.vue';
+export default {
+    components: {
+        'app-header': Header,
+        'app-footer': Footer,
+        'app-ninjas': Ninjas
+    },
+    data () {
+        return {
+          ninjas: [
+              {name: 'Ryu', speciality: 'Vue Components', show: false},
+              {name: 'Crystal', speciality: 'HTML Wizardry', show: false},
+              {name: 'Hitoshi', speciality: 'Click Events', show: false},
+              {name: 'Tango', speciality: 'Conditionals', show: false},
+              {name: 'Kami', speciality: 'Webpack', show: false},
+              {name: 'Yoshi', speciality: 'Data Diggin', show: false}
+          ],
+          title: 'Vue Wizards'
+        }
+    },
+    methods: {
+      updateTitle: function(updatedTitle){
+        this.title = updatedTitle;
+      }
+    }
+}
 // import QuoteSgrid from '@/components/practice/Quotegrid.vue'
 // import NewQuote from '@/components/practice/ Newquote.vue'
 // import Header from '@/components/practice/Header.vue'

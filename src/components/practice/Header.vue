@@ -1,22 +1,36 @@
+
 <template>
-    <div class="row"> 
-        <div class="col-sm-12">
-            <h3>Quotes Added</h3>
-        <div class="progress">
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-value="0" aria-valuemax="100"
-                :style="{width: (quoteCount / maxQuotes) * 100 + '%'}">
-                {{quoteCount}} / {{maxQuotes}}
-            </div>
-        </div>
-        </div>
-        </div>
-        
-    </div>
+    <header>
+        <h1 v-on:click="changeTitle">{{ title }}</h1>
+    </header>
 </template>
 <script>
 export default {
-    name:"HeadeR",
-    props:['quoteCount','maxQuotes']
+    name:"HeaDer",
+    props: {
+      title: {
+        type: String,
+        required: true
+      }
+    },
+    data(){
+        return{
+        }
+    },
+    methods: {
+      changeTitle: function(){
+        this.$emit('changeTitle', 'Vue Ninjas');
+      }
+    }
 }
 </script>
+<style scoped>
+header{
+    background: lightgreen;
+    padding: 10px;
+}
+h1{
+    color: #222;
+    text-align: center;
+}
+</style>

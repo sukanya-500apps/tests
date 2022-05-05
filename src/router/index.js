@@ -51,6 +51,9 @@ import Question6 from '../components/26-04-2022/Question6'
  import que19 from '../components/2-05-2022/que19'
  import crud from '../components/4-5-2022/crud'
  import slot from '../components/practice/slot'
+ import comp from '../components/practice/comp'
+ import scrollspy from '../components/practice/scrollspy'
+ import toggle from '../components/practice/toggle'
 Vue.use(Router)
 const routes=[
 {path:'/callback',name:"callback",component:callback},
@@ -101,6 +104,9 @@ const routes=[
   {path:'/que19',name:"que19",component:que19},
   {path:'/crud',name:"crud",component:crud},
   {path:'/slot',name:"slot",component:slot},
+  {path:'/comp',name:"comp",component:comp},
+  {path:'/toggle',name:"toggle",component:toggle},
+  {path:'/scrollspy',name:"scrollspy",component:scrollspy},
 //{path:'/pagination',name:"pagination",component:pagination},
 //{path:'/networkgraph',name:"networkgraph",component:networkgraph},
 ]
