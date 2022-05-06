@@ -46,7 +46,7 @@ let mypromise=new Promise((myResolve,myReject)=>{
           console.log(response);
         })
         .catch(function (error) {
-          console.log(error);
+          console.error(error);
     });
     axios.put("https://jsonplaceholder.typicode.com/todos",data)
    .then(response => {

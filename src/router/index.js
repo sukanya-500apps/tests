@@ -51,9 +51,14 @@ import Question6 from '../components/26-04-2022/Question6'
  import que19 from '../components/2-05-2022/que19'
  import crud from '../components/4-5-2022/crud'
  import slot from '../components/practice/slot'
- import comp from '../components/practice/comp'
+ //import comp from '../components/practice/comp'
  import scrollspy from '../components/practice/scrollspy'
- import toggle from '../components/practice/toggle'
+ //import toggle from '../components/practice/toggle'
+ import new1 from '../components/practice/new'
+ import tab from '../components/practice/tab'
+ import structure from '../components/practice/structure'
+ import tab1 from '../components/practice/tab1'
+ import collapse from '../components/practice/collapse'
 Vue.use(Router)
 const routes=[
 {path:'/callback',name:"callback",component:callback},
@@ -104,11 +109,16 @@ const routes=[
   {path:'/que19',name:"que19",component:que19},
   {path:'/crud',name:"crud",component:crud},
   {path:'/slot',name:"slot",component:slot},
-  {path:'/comp',name:"comp",component:comp},
-  {path:'/toggle',name:"toggle",component:toggle},
+  //{path:'/comp',name:"comp",component:comp},
+  //{path:'/toggle',name:"toggle",component:toggle},
   {path:'/scrollspy',name:"scrollspy",component:scrollspy},
+  {path:'/new',name:"new",component:new1},
 //{path:'/pagination',name:"pagination",component:pagination},
-//{path:'/networkgraph',name:"networkgraph",component:networkgraph},
+//{path:'/networkgraph',name:"networkgraph",component:networkgraph}, 
+{path:'/tab',name:"tab",component:tab},
+{path:'/tab1',name:"tab1",component:tab1},
+{path:'/collapse',name:"collapse",component:collapse},
+{path:'/structure',name:"structure",component:structure},
 ]
 let router=new Router({routes})
 export default router
