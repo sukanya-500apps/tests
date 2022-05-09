@@ -79,7 +79,4 @@ let mypromise=new Promise((myResolve,myReject)=>{
 
   
  
-
-
-
 </script>

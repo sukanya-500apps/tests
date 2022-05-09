@@ -2,13 +2,13 @@
     <div>
  
     <b-tabs>
-      <b-tab title="Tab 1" active>
-        
-           <label for="name">Name</label>
+      <b-tab  @click="func()" title="Tab 1" active>
+           <!-- <label for="name">Name</label>
             <input id="name" name="contact_name" type="text" class="form-control" value="" required> 
              <label for="id">Id</label>
-        <input id="id" required name="business_id" type="number" class="form-control" value=""> 
-        <b-button type="submit" variant="primary">submit</b-button>
+        <input id="id" required name="business_id" type="number" class="form-control" value="">  -->
+        
+        <b-table :items="res" :fields="fields"></b-table>
         
       </b-tab>
       <b-tab title="Tab 2">
@@ -16,7 +16,7 @@
             <input id="email" name="contact_email" type="email" class="form-control" value="" required>
              <label for="phone">Phone</label>
             <input id="phone" required name="business_phone" type="text" class="form-control" value="">
-             <b-button type="submit" variant="primary" @click="onSubmit()">save</b-button>
+            
       </b-tab>
     </b-tabs>
 
@@ -27,15 +27,15 @@ export default{
     name:"TaB",
     data(){
         return{
-
+res:" "
         }
     },
     methods:{
-             onSubmit(event) {
-        event.preventDefault()
-        alert(JSON.stringify(this.name))
-      },
-        
-    }
+              async func(){
+let response= await fetch("https://jsonplaceholder.typicode.com/todos/")
+this.res=await response.json()
+             }
+    },
+    
 }
 </script>

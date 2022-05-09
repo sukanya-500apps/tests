@@ -7,10 +7,12 @@
 <button @click="func3()">click for map</button>
 <button @click="func4()">click for find</button>
 <button @click="funcc()">click for mapp</button>
+<button @click="func5()">click for mapppp</button>
 <p>{{copy}}</p>
 <p>{{Search.name}}</p>
 <p>{{new_arr}}</p>
 {{studentsnames}}
+{{resutt}}
     </div>
 </template>
 <script>
@@ -20,6 +22,7 @@ export default{
         return{
             studentsnames:[ ],
             new_arr:" ",
+            resutt:[ ],
             Search:" ",
            copy:[ ],
            students: [
@@ -59,6 +62,16 @@ console.log(this.studentt)
     func4(){
 this.Search= this.students.find( element => { return element.age=='22'});
 console.log(this.Search)
+},
+func5(){
+    this.resutt=this.students.map(student=>{
+        if(student.name=="sukanya")
+   {
+        return this.student
+    
+        }
+console.log(this.resutt);
+})
 }
 }
 }

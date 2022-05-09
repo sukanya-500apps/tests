@@ -28,6 +28,7 @@ import Quee8 from '../components/25-04-2022/Quee8'
 import Quee9 from '../components/25-04-2022/Quee9'
 import Quee10 from '../components/25-04-2022/Quee10'
 import emitparent from '../components/practice/emitparent'
+import emitparent1 from '../components/practice/emitparent1'
 import Question1 from '../components/26-04-2022/Question1'
 import Question2 from '../components/26-04-2022/Question2'
  import Question3 from '../components/26-04-2022/Question3'
@@ -59,6 +60,10 @@ import Question6 from '../components/26-04-2022/Question6'
  import structure from '../components/practice/structure'
  import tab1 from '../components/practice/tab1'
  import collapse from '../components/practice/collapse'
+ import newfile from '../components/practice/newfile'
+ import filecomp from '../components/practice/filecomp'
+ import fetchpage from '../components/practice/fetchpage'
+ import propparent from '../components/practice/propparent'
 Vue.use(Router)
 const routes=[
 {path:'/callback',name:"callback",component:callback},
@@ -98,6 +103,7 @@ const routes=[
 {path:'/Question3table',name:"Question3table",component:Question3table},
 {path:'/ques1',name:"ques1",component:ques1},
 {path:'/fetchh',name:"fetch",component:fetchh},
+{path:'/fetchpage',name:"fetchpage",component:fetchpage},
  {path:'/ques2',name:"ques2",component:ques2},
  //{path:'/Listcomponent',name:"Listcomponent",component:Listcomponent},
   {path:'/ques3',name:"que3",component:ques3},
@@ -119,6 +125,10 @@ const routes=[
 {path:'/tab1',name:"tab1",component:tab1},
 {path:'/collapse',name:"collapse",component:collapse},
 {path:'/structure',name:"structure",component:structure},
+{path:'/newfile',name:"newfile",component:newfile},
+{path:'/filecomp',name:"file",component:filecomp},
+{path:'/propparent',name:"propparent",component:propparent},
+{path:'/emitparent1',name:"emitparent1",component:emitparent1,},
 ]
 let router=new Router({routes})
 export default router
