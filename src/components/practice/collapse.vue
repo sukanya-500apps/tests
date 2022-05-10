@@ -6,7 +6,7 @@
       </b-card-header>
       <b-collapse
         id="accordion-1"
-        visible
+       
         accordion="my-accordion"
         role="tabpanel">
         <b-card-body>
@@ -21,7 +21,20 @@ Email:<b-form-input type="Email" name="Email" placeholder="Enter your Email" req
 </b-form>
 <b-button size="sm" variant="danger" class="float-right" @click="closeTab(i)">
 Close Tab
-</b-button></b-card-text>
+</b-button>
+    <b-input-group-prepend is-text>
+        <b-icon icon="tag-fill"  size="l"></b-icon> 
+       
+      </b-input-group-prepend>
+      <b-form-tags
+        separator=" ,;"
+        tag-variant="primary"
+        placeholder="Enter new tags separated by space, comma or semicolon"
+        no-add-on-enter>
+      <button @click="func()">click for data</button>
+      <p>{{responseText}}</p>
+      </b-form-tags>
+    </b-card-text>
         </b-card-body>
       </b-collapse>
     </b-card>
@@ -31,7 +44,6 @@ Close Tab
       </b-card-header>
       <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
         <b-card-body>
-          <b-card-text>name:</b-card-text>
         </b-card-body>
       </b-collapse>
     </b-card>
@@ -43,6 +55,14 @@ Close Tab
         <b-card-body>
           <b-card-text>{{ text }}</b-card-text>
         </b-card-body>
+        <b-input-group-prepend is-text>
+     <b-icon icon="tag-fill" font-scale="2" ></b-icon>
+      </b-input-group-prepend>
+      <b-form-tags 
+        separator=" ,;"
+        tag-variant="primary"
+        placeholder="Enter new tags separated by space, comma or semicolon"
+        no-add-on-enter></b-form-tags>
       </b-collapse>
     </b-card>
   </div>
@@ -57,6 +77,17 @@ export default {
         }
     },
     methods:{
+      
+async func(){
+
+const response=await fetch("https://jsonplaceholder.typicode.com/todos");
+
+const responseText= await response.json();
+
+this.items=responseText;
+
+},
+      },
         closeTab(x) {
         for (let i = 0; i < this.tabs.length; i++) {
           if (this.tabs[i] === x) {
@@ -68,6 +99,6 @@ export default {
         this.tabs.push(this.tabCounter++)
       }
     }
-}
+
 </script>
 

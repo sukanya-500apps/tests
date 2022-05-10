@@ -39,10 +39,12 @@ import Question6 from '../components/26-04-2022/Question6'
  import Question7 from '../components/26-04-2022/Question7'
  import Question3table from '../components/27-04-2022/Question3table'
  import ques1 from '../components/28-04-2022/ques1'
+ import quest1 from '../components/10-05-22/que1'
  import ques2 from '../components/28-04-2022/ques2'
  //import Listcomponent from '../components/practice/Listcomponent'
  //import pagination from '../components/practice/pagination'
  import ques3 from '../components/28-04-2022/ques3'
+ import nexttick from '../components/practice/nexttick'
  //import networkgraph from '../components/28-04-2022/networkgraph'
  import que11 from '../components/2-05-2022/que11'
  import que12 from '../components/2-05-2022/que12'
@@ -108,6 +110,7 @@ const routes=[
  //{path:'/Listcomponent',name:"Listcomponent",component:Listcomponent},
   {path:'/ques3',name:"que3",component:ques3},
   {path:'/que11',name:"que11",component:que11},
+  {path:'/quest1',name:"quest1",component:quest1},
   {path:'/que12',name:"que12",component:que12},
   {path:'/que13',name:"que13",component:que13},
   {path:'/que17',name:"que17",component:que17},
@@ -115,6 +118,7 @@ const routes=[
   {path:'/que19',name:"que19",component:que19},
   {path:'/crud',name:"crud",component:crud},
   {path:'/slot',name:"slot",component:slot},
+  {path:'/nexttick',name:"nexttick",component:nexttick},
   //{path:'/comp',name:"comp",component:comp},
   //{path:'/toggle',name:"toggle",component:toggle},
   {path:'/scrollspy',name:"scrollspy",component:scrollspy},

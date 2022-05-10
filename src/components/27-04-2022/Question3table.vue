@@ -26,7 +26,6 @@
                
            </template>
        </TablE>
-
    </div>
 </template>
 
