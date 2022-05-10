@@ -41,6 +41,7 @@ import Question6 from '../components/26-04-2022/Question6'
  import ques1 from '../components/28-04-2022/ques1'
  import quest1 from '../components/10-05-22/que1'
  import ques2 from '../components/28-04-2022/ques2'
+ import quest2 from '../components/10-05-22/que2'
  //import Listcomponent from '../components/practice/Listcomponent'
  //import pagination from '../components/practice/pagination'
  import ques3 from '../components/28-04-2022/ques3'
@@ -54,6 +55,7 @@ import Question6 from '../components/26-04-2022/Question6'
  import que19 from '../components/2-05-2022/que19'
  import crud from '../components/4-5-2022/crud'
  import slot from '../components/practice/slot'
+ import file from '../components/practice/file'
  //import comp from '../components/practice/comp'
  import scrollspy from '../components/practice/scrollspy'
  //import toggle from '../components/practice/toggle'
@@ -107,6 +109,7 @@ const routes=[
 {path:'/fetchh',name:"fetch",component:fetchh},
 {path:'/fetchpage',name:"fetchpage",component:fetchpage},
  {path:'/ques2',name:"ques2",component:ques2},
+ {path:'/quest2',name:"quest2",component:quest2},
  //{path:'/Listcomponent',name:"Listcomponent",component:Listcomponent},
   {path:'/ques3',name:"que3",component:ques3},
   {path:'/que11',name:"que11",component:que11},
@@ -126,6 +129,7 @@ const routes=[
 //{path:'/pagination',name:"pagination",component:pagination},
 //{path:'/networkgraph',name:"networkgraph",component:networkgraph}, 
 {path:'/tab',name:"tab",component:tab},
+{path:'/file',name:"file",component:file},
 {path:'/tab1',name:"tab1",component:tab1},
 {path:'/collapse',name:"collapse",component:collapse},
 {path:'/structure',name:"structure",component:structure},
