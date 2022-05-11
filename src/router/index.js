@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import callback from '../components/19-04-2022/callback'
 import callback2 from '../components/19-04-2022/callback2'
 import axios from '../components/19-04-2022/axios'
-import foreach from '../components/19-04-2022/foreach'
+//import foreach from '../components/19-04-2022/foreach'
 import callbacK from '../components/practice/callbacK'
 import que1 from '../components/20-04-2022/que1'
 import que3 from '../components/20-04-2022/que3'
@@ -16,6 +16,7 @@ import que9 from '../components/20-04-2022/que9'
 import que10 from '../components/20-04-2022/que10'
 import spliceslice from '../components/practice/spliceslice'
 import foreach1 from '../components/practice/foreach1'
+import foreach from '../components/practice/foreach'
 import axios1 from '../components/practice/axios1'
 import dropdown from '../components/practice/dropdown'
 import parse from '../components/practice/parse'
@@ -68,6 +69,10 @@ import Question6 from '../components/26-04-2022/Question6'
  import filecomp from '../components/practice/filecomp'
  import fetchpage from '../components/practice/fetchpage'
  import propparent from '../components/practice/propparent'
+ import refparent from '../components/practice/refparent'
+ import sett from '../components/practice/sett'
+ import hi from '../components/practice/hi'
+ import questt4 from '../components/10-05-22/que4'
 Vue.use(Router)
 const routes=[
 {path:'/callback',name:"callback",component:callback},
@@ -84,6 +89,7 @@ const routes=[
 {path:'/que9',name:"que9",component:que9,}, 
 {path:'/que10',name:"que10",component:que10,},
 {path:'/foreach1',name:"foreach1",component:foreach1,},
+{path:'/foreach',name:"foreach",component:foreach},
 {path:'/spliceslice',name:"spliceslice",component:spliceslice,},
 {path:'/axios1',name:"axios1",component:axios1,},
 {path:'/dropdown',name:"dropdown",component:dropdown,},
@@ -137,6 +143,10 @@ const routes=[
 {path:'/filecomp',name:"file",component:filecomp},
 {path:'/propparent',name:"propparent",component:propparent},
 {path:'/emitparent1',name:"emitparent1",component:emitparent1,},
+{path:'/refparent',name:"refparent1",component:refparent,},
+{path:'/sett',name:"sett",component:sett,},
+{path:'/hi',name:"hi",component:hi,},
+{path:'/questt4',name:"questt4",component:questt4,},
 ]
 let router=new Router({routes})
 export default router
