@@ -26,14 +26,12 @@
           </h5>
           <nav class="mb-3">
             <b-nav vertical>
-              <b-nav-item active @click="hide">Active</b-nav-item>
-              <b-nav-item href="#link-1" @click="hide">Link</b-nav-item>
-              <b-nav-item href="#link-2" @click="hide">Another Link</b-nav-item>
+              <b-nav-item href="https://jsonplaceholder.typicode.com/todos/" target="_self" @click="hide">Link</b-nav-item>
+              <b-nav-item href="http://universities.hipolabs.com/search?country=India"  target="_blank" @click="hide">Another Link</b-nav-item>
               <b-table striped hover :items="names" :fields="fields"></b-table>
     <label for="tags-basic">Type a new tag and press enter</label>
     <b-form-tags input-id="tags-basic" v-model="value"></b-form-tags>
     <p class="mt-2">Value: {{ value }}</p>
-  
             </b-nav>
           </nav>
           <b-button variant="primary" block @click="hide">Close Sidebar</b-button>
@@ -47,14 +45,9 @@ export default{
     name:"HiI",
     data(){
         return{
-            names:[{productname:"", price:"",category:""}],
+            names:[ ],
 fields:["productname","price","category"],
             value:" ",
-             form: {
-          val: '',
-          val1: '',
-          val2: ' '
-             }
         }
     },
     methods: {
@@ -64,10 +57,6 @@ productname:this.val,
 price:this.val1,
 category:this.val2,
 });
-this.val = ""
-this.val1 = ""
-this.val2 = ""
-this.val3 = ""
 },
 }
 }

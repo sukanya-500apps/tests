@@ -13,13 +13,25 @@ data(){
 string:" "
     }
 },
-methods:{
-    func(){
+created(){
+  setTimeout(() => {
+        this.string="hello"
+        console.log("time is",this.string);
+      }, 3000);
+},
+mounted(){
           setTimeout(() => {
-        this.string="jhh"
-        //console.log("time is",this.string);
-      }, 5000);
+        this.string="hii"
+        console.log("time is",this.string);
+      }, 4000);
     },
+    methods:{
+      func(){
+        setTimeout(() => {
+        this.string="jhh"
+        console.log("time is",this.string);
+      }, 3000);
+      }
     }
 }
 

@@ -73,6 +73,7 @@ import Question6 from '../components/26-04-2022/Question6'
  import sett from '../components/practice/sett'
  import hi from '../components/practice/hi'
  import questt4 from '../components/10-05-22/que4'
+ import parenttable from '../components/practice/parenttable'
 Vue.use(Router)
 const routes=[
 {path:'/callback',name:"callback",component:callback},
@@ -147,6 +148,7 @@ const routes=[
 {path:'/sett',name:"sett",component:sett,},
 {path:'/hi',name:"hi",component:hi,},
 {path:'/questt4',name:"questt4",component:questt4,},
+{path:'/parenttable',name:"parenttable",component:parenttable,},
 ]
 let router=new Router({routes})
 export default router
