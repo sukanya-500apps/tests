@@ -14,7 +14,7 @@ data(){
 },
 methods:{
     parent(){
-      this.$emit('check',{name:'sukanya',subject:'db'})
+      this.$emit('check',{name:'sukanya'})
     }
 }
 }

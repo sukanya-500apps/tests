@@ -1,14 +1,15 @@
 <template>
-  <div style="text-align: center " >
+  <div style="text-align: center ">
+   
        <b-tabs content-class="mt-3">
     <b-tab title="First" active>
         <center><b-card style="max-width: 20rem;" class="mb-2">
 <b-card-group>
-<b-form>
-<b-form-input type="text" placeholder="enter product name" v-model="val"></b-form-input><br>
-<b-form-input type="text" placeholder="enter price" v-model="val1"></b-form-input><br>
-<b-form-input type="text" placeholder="enter productcategory" v-model="val2"></b-form-input><br>
-<b-button variant="btn btn-primary btn-sm" @click="fun()">submit</b-button>
+<b-form id="form">
+<b-form-input id="form1" type="text" placeholder="enter product name" v-model="val" required ></b-form-input><br>
+<b-form-input type="text" placeholder="enter price" v-model="val1" required></b-form-input><br>
+<b-form-input type="text" placeholder="enter productcategory" v-model="val2" required></b-form-input><br>
+<button type="submit" id="button1"  @click="fun()" >Send</button>
 </b-form>
 </b-card-group>
 </b-card></center><br>
@@ -16,8 +17,9 @@
     <b-tab title="Second"><p>I'm the second tab</p></b-tab>
     <b-tab title="Disabled" disabled><p>I'm a disabled tab!</p></b-tab>
   </b-tabs>
-    <b-button v-b-toggle.sidebar-no-header align="centre">save</b-button>
-    <b-sidebar id="sidebar-no-header" aria-labelledby="sidebar-no-header-title" no-header shadow >
+  <div>
+    <b-button v-b-toggle.sidebar-no-header align="centre" id="button" >save</b-button>
+    <b-sidebar id="sidebar-no-header"  aria-labelledby="sidebar-no-header-title" no-header shadow >
       <template #default="{ hide }">
         <div class="p-3">
           <h4 id="sidebar-no-header-title">Custom product sidebar</h4>
@@ -31,13 +33,16 @@
               <b-table striped hover :items="names" :fields="fields"></b-table>
     <label for="tags-basic">Type a new tag and press enter</label>
     <b-form-tags input-id="tags-basic" v-model="value"></b-form-tags>
-    <p class="mt-2">Value: {{ value }}</p>
+    <p class="mt-2">Value: {{ value }}
+      
+    </p>
             </b-nav>
           </nav>
           <b-button variant="primary" block @click="hide">Close Sidebar</b-button>
         </div>
       </template>
     </b-sidebar>
+  </div>
   </div>
 </template>
 <script>
@@ -58,8 +63,17 @@ price:this.val1,
 category:this.val2,
 });
 },
-}
-}
+ isdisable(){
+	if(document.getElementById("form").value===" ") { 
+            document.getElementById('button').disabled = true; 
+        } else { 
+            document.getElementById('button').disabled = false;
+        }
+        
+    },
+ }
+    }
+
 </script>
 <style scoped>
 </style>

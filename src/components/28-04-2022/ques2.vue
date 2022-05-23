@@ -30,7 +30,7 @@ website_url: {{ value.website_url }}</p>
         
         <div class="col-md-6">
             <h3>University details</h3>
-          <div class="p-2 alert alert-secondary" v-for="data1 in items" :key="data1.id" >
+          <div class="p-2 alert alert-secondary" v-for="data1 in items" :key="data1.id">
             <!-- <h3>University details</h3> -->
             <draggable   class="list-group kanban-column" group="tasks">
               <div class="list-group-item" >
@@ -40,7 +40,7 @@ website_url: {{ value.website_url }}</p>
                  v-for="data1 in items"
                       :key="data1.id"
                       :per-page="pageSize" :current-page="currentPage"
-                      small>
+                      small >
                     </b-card-text>
                         <b-row>
                           <b-col>University name:{{ data1.university_name }}</b-col>

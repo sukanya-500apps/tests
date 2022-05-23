@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<h1>hii</h1>
+    </head>
+    <body>
+        <textarea class="input" id="textsend" onkeyup="success()" name="demo" placeholder="Enter your Message..."></textarea>
+<button type="submit" id="button" disabled>Send</button>
+</body>
+<script type="text/javascript">
+   function success() {
+	 if(document.getElementById("textsend").value==="") { 
+            document.getElementById('button').disabled = true; 
+        } else { 
+            document.getElementById('button').disabled = false;
+        }
+    }
+
+</script>
+    
+</html>

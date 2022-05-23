@@ -20,6 +20,8 @@ import foreach from '../components/practice/foreach'
 import axios1 from '../components/practice/axios1'
 import dropdown from '../components/practice/dropdown'
 import parse from '../components/practice/parse'
+import provide from '../components/practice/provide'
+import dropdown1 from '../components/practice/dropdown1'
 import fetchh from '../components/practice/fetchh'
 import Quee1 from '../components/25-04-2022/Quee1'
 import Quee2 from '../components/25-04-2022/Quee2'
@@ -74,8 +76,15 @@ import Question6 from '../components/26-04-2022/Question6'
  import hi from '../components/practice/hi'
  import questt4 from '../components/10-05-22/que4'
  import parenttable from '../components/practice/parenttable'
+ import login from '../components/practice/login'
+ import register from '../components/practice/register'
+ import forgotpsw from '../components/practice/forgotpsw'
+ //import provide from '../'
 Vue.use(Router)
 const routes=[
+  {path:'/login',name:"login",component:login},
+  {path:'/register',name:"register",component:register},
+  {path:'/forgotpsw',name:"forgotpsw",component:forgotpsw},
 {path:'/callback',name:"callback",component:callback},
 {path:'/callback2',name:"callback2",component:callback2},
 {path:'/axios',name:"axios",component:axios,},
@@ -84,6 +93,7 @@ const routes=[
 {path:'/que3',name:"que3",component:que3,}, 
 {path:'/foreach',name:"foreach",component:foreach,}, 
 {path:'/que5',name:"que5",component:que5,}, 
+{path:'/provide',name:"provide",component:provide,}, 
 {path:'/que6',name:"que6",component:que6,}, 
 {path:'/que7',name:"que7",component:que7,}, 
 {path:'/que8',name:"que8",component:que8,}, 
@@ -94,6 +104,7 @@ const routes=[
 {path:'/spliceslice',name:"spliceslice",component:spliceslice,},
 {path:'/axios1',name:"axios1",component:axios1,},
 {path:'/dropdown',name:"dropdown",component:dropdown,},
+{path:'/dropdown1',name:"dropdown1",component:dropdown1,},
 {path:'/parse',name:"parse",component:parse,},
 {path:'/Quee1',name:"Quee1",component:Quee1,},
 {path:'/Quee2',name:"Quee2",component:Quee2,},

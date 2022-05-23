@@ -1,4 +1,20 @@
 <template>
+<!-- <div class="vue-tempalte">
+     Navigation 
+     <nav class="navbar shadow bg-white rounded justify-content-between flex-nowrap flex-row fixed-top">
+      <div class="container">
+        
+        <ul class="nav navbar-nav flex-row float-right">
+          <li class="nav-item">
+            <router-link class="nav-link pr-3" to="/login">Sign in</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="btn btn-outline-primary" to=" ">Sign up</router-link>
+          </li>
+        </ul>
+      </div>
+    </nav>
+ <div>  -->
     <router-view/>
     <!-- <div>
       <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
@@ -26,9 +42,10 @@
          <div class="alert alert-info" id="add">info:click on a Quote to delete it!</div>
         <div col-sm-12></div>
       </div>
+  </div>-->
+  <!-- </div> 
   </div>
-  </div> 
-  </div> -->
+  -->
 </template>
 <script>
 // import Header from '@components/practice/Header.vue';
